@@ -1,7 +1,7 @@
 object DataModule4: TDataModule4
   OldCreateOrder = False
-  Left = 722
-  Top = 156
+  Left = 254
+  Top = 171
   Height = 218
   Width = 472
   object ZConnection1: TZConnection

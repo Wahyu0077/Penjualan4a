@@ -1,4 +1,4 @@
-object Form8: TForm8
+object User: TUser
   Left = 223
   Top = 163
   Width = 767

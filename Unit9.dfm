@@ -1,4 +1,4 @@
-object Form9: TForm9
+object Barang: TBarang
   Left = 234
   Top = 179
   Width = 767

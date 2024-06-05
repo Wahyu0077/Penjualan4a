@@ -59,22 +59,22 @@ end;
 
 procedure TForm1.KATEGORI1Click(Sender: TObject);
 begin
-   Form3.Show;
+   Kategori.Show;
 end;
 
 procedure TForm1.SATUA1Click(Sender: TObject);
 begin
-  Form5.Show;
+  Satuan.Show;
 end;
 
 procedure TForm1.SUPPLIER1Click(Sender: TObject);
 begin
-  Form6.Show;
+  Supplier.Show;
 end;
 
 procedure TForm1.KUSTOMER1Click(Sender: TObject);
 begin
-  Form7.Show;
+  Kustomer.Show;
 end;
 
 end.

@@ -7,7 +7,7 @@ uses
   Dialogs, Grids, DBGrids, StdCtrls;
 
 type
-  TForm6 = class(TForm)
+  TSupplier = class(TForm)
     lbl1: TLabel;
     lbl2: TLabel;
     edt1: TEdit;
@@ -28,55 +28,55 @@ type
   end;
 
 var
-  Form6: TForm6;
+  Supplier: TSupplier;
   a : string;
 
 implementation
 
-uses Unit4;
+uses Unit10;
 
 {$R *.dfm}
 
-procedure TForm6.btn1Click(Sender: TObject);
+procedure TSupplier.btn1Click(Sender: TObject);
 begin
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('insert into kategori values(null, "' + edt1.Text + '")');
-  Form4.Zsupplier.ExecSQL;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('insert into kategori values(null, "' + edt1.Text + '")');
+  DataModule4.Zsupplier.ExecSQL;
 
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('select * from kategori');
-  Form4.Zsupplier.Open;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('select * from kategori');
+  DataModule4.Zsupplier.Open;
   ShowMessage('Data Berhasil disimpan!');
 end;
 
-procedure TForm6.btn2Click(Sender: TObject);
+procedure TSupplier.btn2Click(Sender: TObject);
 begin
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('update kategori set name="'+edt1.Text+'" where id= '+a);
-  Form4.Zsupplier.ExecSQL;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('update kategori set name="'+edt1.Text+'" where id= '+a);
+  DataModule4.Zsupplier.ExecSQL;
 
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('select * from kategori');
-  Form4.Zsupplier.Open;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('select * from kategori');
+  DataModule4.Zsupplier.Open;
   ShowMessage('Data Berhasil Diupdate!');
 end;
 
-procedure TForm6.btn3Click(Sender: TObject);
+procedure TSupplier.btn3Click(Sender: TObject);
 begin
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('delete from kategori where id= '+a);
-  Form4.Zsupplier.ExecSQL;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('delete from kategori where id= '+a);
+  DataModule4.Zsupplier.ExecSQL;
 
-  Form4.Zsupplier.SQL.Clear;
-  Form4.Zsupplier.SQL.Add('select * from kategori');
-  Form4.Zsupplier.Open;
+  DataModule4.Zsupplier.SQL.Clear;
+  DataModule4.Zsupplier.SQL.Add('select * from kategori');
+  DataModule4.Zsupplier.Open;
   ShowMessage('Data Berhasil Didelete!');
 end;
 
-procedure TForm6.dbgrd1CellClick(Column: TColumn);
+procedure TSupplier.dbgrd1CellClick(Column: TColumn);
 begin
-  edt1.Text:= DataModule4.Zsupplier.Field[1].AsString;
-  a:= DataModule4.Zsupplier.Field[0].AsString;
+  edt1.Text:= DataModule4.Zsupplier.Fields[1].AsString;
+  a:= DataModule4.Zsupplier.Fields[0].AsString;
 end;
 
 end.

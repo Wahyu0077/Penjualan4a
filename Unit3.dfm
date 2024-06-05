@@ -1,4 +1,4 @@
-object Form3: TForm3
+object Kategori: TKategori
   Left = 192
   Top = 180
   Width = 767

@@ -1,4 +1,4 @@
-object Form6: TForm6
+object Supplier: TSupplier
   Left = 192
   Top = 152
   Width = 719

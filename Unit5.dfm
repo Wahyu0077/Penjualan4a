@@ -1,4 +1,4 @@
-object Form5: TForm5
+object Satuan: TSatuan
   Left = 151
   Top = 172
   Width = 767

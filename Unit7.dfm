@@ -1,4 +1,4 @@
-object Form7: TForm7
+object Kustomer: TKustomer
   Left = 192
   Top = 152
   Width = 767

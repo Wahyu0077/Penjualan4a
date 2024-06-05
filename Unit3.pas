@@ -7,7 +7,7 @@ uses
   Dialogs, Grids, StdCtrls, DB, DBGrids;
 
 type
-  TForm3 = class(TForm)
+  TKategori = class(TForm)
     lbl1: TLabel;
     edt1: TEdit;
     btn1: TButton;
@@ -28,16 +28,16 @@ type
   end;
 
 var
-  Form3: TForm3;
+  Kategori: TKategori;
   a: string;
 
 implementation
 
-uses Unit4, Unit10;
+uses Unit10;
 
 {$R *.dfm}
 
-procedure TForm3.btn1Click(Sender: TObject);
+procedure TKategori.btn1Click(Sender: TObject);
 begin
   DataModule4.Zkategori.SQL.Clear;
   DataModule4.Zkategori.SQL.Add('insert into kategori values(null, "'+edt1.Text+'")');
@@ -49,7 +49,7 @@ begin
   ShowMessage('Data Berhasil disimpan!');
 end;
 
-procedure TForm3.btn2Click(Sender: TObject);
+procedure TKategori.btn2Click(Sender: TObject);
 begin
   DataModule4.Zkategori.SQL.Clear;
   DataModule4.Zkategori.SQL.Add('update kategori set name="'+edt1.Text+'" where id= '+a);
@@ -61,7 +61,7 @@ begin
   ShowMessage('Data Berhasil Diupdate!');
 end;
 
-procedure TForm3.btn3Click(Sender: TObject);
+procedure TKategori.btn3Click(Sender: TObject);
 begin
   DataModule4.Zkategori.SQL.Clear;
   DataModule4.Zkategori.SQL.Add('delete from kategori where id= '+a);
@@ -73,7 +73,7 @@ begin
   ShowMessage('Data Berhasil Didelete!');
 end;
 
-procedure TForm3.dbgrd1CellClick(Column: TColumn);
+procedure TKategori.dbgrd1CellClick(Column: TColumn);
 begin
   edt1.Text:= DataModule4.Zkategori.Fields[1].AsString;
   a:= DataModule4.Zkategori.Fields[0].AsString;
